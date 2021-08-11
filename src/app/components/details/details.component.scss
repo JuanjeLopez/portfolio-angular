@@ -1,0 +1,292 @@
+.search{
+    &-container{
+        width: 100%;
+        height: 60px;
+        background-color: #323a45;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+}
+    
+
+.logo{
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 200ms;
+    padding-right: 20px;
+}
+
+.logo:hover{
+    color:rgb(65, 141, 128);
+    transform: scale(0.9);
+}
+
+
+.game-gauge{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.game-content{
+    margin-top: -170px;
+}
+
+
+.details-wrapper{
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.details{
+
+    ::ng-deep mwl-gauge{
+        width: 150px;
+        height: 150px;
+        display: block;
+        padding: 10px;
+
+        .dial{
+            stroke-width: 10;
+        }
+
+        .value{
+            stroke-dasharray: none;
+            stroke-width: 13;
+        }
+
+        .value-text{
+            fill: #fff;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+
+    .game-gauge{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+
+        &-label{
+            font-size: 20px;
+            color: #fff;
+            position: relative;
+            bottom: 60px;
+        }
+    }
+
+    .game{
+
+        &-banner{
+            height: 442px;
+            overflow: hidden;
+           
+
+            &-img{
+                width: 100%;
+                filter: blur(5px);
+            }
+        }
+
+        &-content{
+            text-align: center;
+            position: relative;
+            top: -196px;
+        }
+
+        &-header{
+
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            
+
+            &-title{
+                background-color:rgb(65, 141, 128);
+                font-size: 70px;
+                color: #fff;
+                font-weight: 700;
+                line-height: 70px;
+                white-space: nowrap;
+                border-radius: 50px;
+                padding: 5px 80px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+
+            &-release-date{
+                color: #fff;
+                font-weight: 700;
+            }
+    
+            &-genres{
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+
+        
+    }
+}
+
+
+@media (max-width: 1000px){
+
+    .game{
+        &-banner{
+            height: 342px !important;
+        }
+    }
+
+
+    .game-header-title{
+        margin-top: -50px !important;
+        font-size: 50px !important;
+        width: 700px;
+    }
+
+    .game-gauge{
+        margin-top: 50px !important;
+
+        &-label{
+            font-size: 15px !important;
+        }
+    }
+
+    .game{
+        &-header{
+            &-release-date{
+                font-size: 17px;
+            }
+    
+            &-genres{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 700px){
+
+    .game-content{
+        margin-top: -150px;
+    }
+
+    .game{
+        &-banner{
+            height: 302px !important;
+        }
+    }
+
+    .game-header-title{
+        margin-top: -70px !important;
+        font-size: 35px !important;
+        width: 500px;
+        padding: 0px !important;
+    }
+
+    .game-gauge{  
+        
+        &-label{
+            font-size: 13px !important;
+        }
+    }
+
+    .game{
+        &-header{
+            &-release-date{
+                font-size: 15px;
+            }
+    
+            &-genres{
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px){
+
+    .game{
+        &-banner{
+            height: 250px !important;
+        }
+    }
+
+
+    .game-header-title{
+        font-size: 28px !important;
+        width: 350px;
+        padding: 0px !important;
+    }
+
+    .game-gauge{       
+        opacity: 0;
+    }
+
+    .game{
+        &-header{
+            &-release-date{
+                font-weight: 400;
+                font-size: 13px;
+            }
+    
+            &-genres{
+                
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .game{
+        &-banner{
+            height: 230px !important;
+        }
+    }
+}
+
+@media (max-width: 400px){
+
+    .game{
+        &-banner{
+            height: 200px !important;
+        }
+    }
+
+
+    .game-header-title{
+        font-size: 22px !important;
+        width: 300px;
+        padding: 0px !important;
+    }
+
+    .game-gauge{       
+        &-label{
+            font-size: 15px !important;
+        }
+    }
+}
